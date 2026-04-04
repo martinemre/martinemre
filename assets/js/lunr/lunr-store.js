@@ -5,10 +5,10 @@ var store = [{
         "url": "/azure/test1/",
         "teaser": null
       },{
-        "title": "Azure VNet Nedir?",
-        "excerpt":"Bu benim ilk yazımmm  ","categories": ["Azur1"],
+        "title": "Azure VNets Nedir?",
+        "excerpt":"Bu benim ilk yazımmm  ","categories": ["AzurE"],
         "tags": ["vnet","networking"],
-        "url": "/azur1/test/",
+        "url": "/azure/test/",
         "teaser": null
       },{
     "title": "Page 4",
@@ -27,7 +27,7 @@ var store = [{
     "excerpt":"                          ","url": "https://martinemre.github.io/collection-archive/"
   },{
     "title": null,
-    "excerpt":"  \t \t\tmartinemre \t\t**\t\t \t\thttps://martinemre.github.io \t\t \t\t \t\t\t \t\t\t\tAzure VNet Nedir? \t\t\t\t&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;  \t\t\t\tSat, 04 Apr 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azur1/test/ \t\t\t\thttps://martinemre.github.io/azur1/test/ \t\t\t \t\t \t\t\t \t\t\t\tAzure VNet Nedir? \t\t\t\t&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t \t\t \t  ","url": "https://martinemre.github.io/feed.xml"
+    "excerpt":"  \t \t\tmartinemre \t\t**\t\t \t\thttps://martinemre.github.io \t\t \t\t \t\t\t \t\t\t\tAzure VNets Nedir? \t\t\t\t&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;  \t\t\t\tSat, 04 Apr 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t \t\t \t\t\t \t\t\t\tAzure VNet Nedir? \t\t\t\t&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t \t\t \t  ","url": "https://martinemre.github.io/feed.xml"
   },{
     "title": null,
     "excerpt":"","url": "https://martinemre.github.io/"
