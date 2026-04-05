@@ -7,21 +7,21 @@
 		<atom:link href="https://martinemre.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Azure VNets Nedir?</title>
-				<description>&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;
+				<title>Test</title>
+				<description>
 </description>
-				<pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
-				<link>https://martinemre.github.io/azure/test/</link>
-				<guid isPermaLink="true">https://martinemre.github.io/azure/test/</guid>
+				<pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+				<link>https://martinemre.github.io/test/</link>
+				<guid isPermaLink="true">https://martinemre.github.io/test/</guid>
 			</item>
 		
 			<item>
-				<title>Azure VNet Nedir?</title>
-				<description>&lt;p&gt;Bu benim ilk yazımmm&lt;/p&gt;
+				<title>Test</title>
+				<description>
 </description>
 				<pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-				<link>https://martinemre.github.io/azure/test1/</link>
-				<guid isPermaLink="true">https://martinemre.github.io/azure/test1/</guid>
+				<link>https://martinemre.github.io/test1/</link>
+				<guid isPermaLink="true">https://martinemre.github.io/test1/</guid>
 			</item>
 		
 	</channel>
