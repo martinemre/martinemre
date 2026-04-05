@@ -26,13 +26,13 @@
 
 &lt;h2 id=&quot;how-to-create-a-draft&quot;&gt;How to create a Draft?&lt;/h2&gt;
 
-&lt;p&gt;To create a draft, follow these steps: - Firewall Policy → Draft + Deploy → Draft&lt;/p&gt;
+&lt;p&gt;To create a draft, follow these steps: Firewall Policy → Draft + Deploy → Draft&lt;/p&gt;
 
 &lt;p&gt;Using this path, you can create a draft based on the current policy and start making your changes in an isolated environment.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/azurefirewall/azurefirewall.png&quot; alt=&quot;Firewall&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;Heads up: After a draft is created, any direct changes made to the production policy will be overwritten during deployment. This means that if someone modifies live rules while you are working on the draft, those changes will be lost without notice.&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;Heads up:&lt;/strong&gt; After a draft is created, any direct changes made to the production policy will be overwritten during deployment. This means that if someone modifies live rules while you are working on the draft, those changes will be lost without notice.&lt;/p&gt;
 
 &lt;p&gt;After the draft is created, you can make any changes you need on it.&lt;/p&gt;
 
