@@ -32,7 +32,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/azurefirewall/azurefirewall.png&quot; alt=&quot;Firewall&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;notice--warning&quot;&gt;After a draft is created, any direct changes made to the production policy will be overwritten during deployment. This means that if someone modifies live rules while you are working on the draft, those changes will be lost without notice.&lt;/p&gt;
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;Heads up: After a draft is created, any direct changes made to the production policy will be overwritten during deployment. This means that if someone modifies live rules while you are working on the draft, those changes will be lost without notice.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;After the draft is created, you can make any changes you need on it.&lt;/p&gt;
 
