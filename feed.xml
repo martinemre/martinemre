@@ -6,14 +6,5 @@
 		<link>https://martinemre.github.io</link>
 		<atom:link href="https://martinemre.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
-			<item>
-				<title>Test</title>
-				<description>
-</description>
-				<pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-				<link>https://martinemre.github.io/azure/test1/</link>
-				<guid isPermaLink="true">https://martinemre.github.io/azure/test1/</guid>
-			</item>
-		
 	</channel>
 </rss>
