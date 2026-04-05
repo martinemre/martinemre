@@ -1,10 +1,4 @@
 var store = [{
-        "title": "Emre",
-        "excerpt":"Bu benim yazım  ","categories": ["Azure"],
-        "tags": ["vnet","networking"],
-        "url": "/azure/emre/",
-        "teaser": null
-      },{
         "title": "Test",
         "excerpt":" ","categories": ["Azure"],
         "tags": ["vnet","networking"],
@@ -30,10 +24,10 @@ var store = [{
     "excerpt":" ","url": "https://martinemre.github.io/categories/"
   },{
     "title": "Posts by Collection",
-    "excerpt":"                                  ","url": "https://martinemre.github.io/collection-archive/"
+    "excerpt":"                          ","url": "https://martinemre.github.io/collection-archive/"
   },{
     "title": null,
-    "excerpt":"  \t \t\tmartinemre \t\t**\t\t \t\thttps://martinemre.github.io \t\t \t\t \t\t\t \t\t\t\tTest \t\t\t\t  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t \t\t \t\t\t \t\t\t\tTest \t\t\t\t  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t \t\t \t\t\t \t\t\t\tEmre \t\t\t\t&lt;p&gt;Bu benim yazım&lt;/p&gt;  \t\t\t\tThu, 01 Jan 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/emre/ \t\t\t\thttps://martinemre.github.io/azure/emre/ \t\t\t \t\t \t  ","url": "https://martinemre.github.io/feed.xml"
+    "excerpt":"  \t \t\tmartinemre \t\t**\t\t \t\thttps://martinemre.github.io \t\t \t\t \t\t\t \t\t\t\tTest \t\t\t\t  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t\thttps://martinemre.github.io/azure/test/ \t\t\t \t\t \t\t\t \t\t\t\tTest \t\t\t\t  \t\t\t\tMon, 02 Feb 2026 00:00:00 +0000 \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t\thttps://martinemre.github.io/azure/test1/ \t\t\t \t\t \t  ","url": "https://martinemre.github.io/feed.xml"
   },{
     "title": null,
     "excerpt":"","url": "https://martinemre.github.io/"

@@ -24,14 +24,5 @@
 				<guid isPermaLink="true">https://martinemre.github.io/azure/test1/</guid>
 			</item>
 		
-			<item>
-				<title>Emre</title>
-				<description>&lt;p&gt;Bu benim yazım&lt;/p&gt;
-</description>
-				<pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-				<link>https://martinemre.github.io/azure/emre/</link>
-				<guid isPermaLink="true">https://martinemre.github.io/azure/emre/</guid>
-			</item>
-		
 	</channel>
 </rss>
