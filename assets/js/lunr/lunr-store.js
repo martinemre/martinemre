@@ -48,13 +48,10 @@ var store = [{
     "excerpt":"@import \"jekyll-theme-primer\"; ","url": "https://martinemre.github.io/assets/css/style.css"
   },{
     "title": "Table of contents",
-    "excerpt":"# Table of contents  * [Page](README.md)  ## Group 1  * [Page 3](group-1/page-3/README.md)   * [Page 4](group-1/page-3/page-4/README.md)     * [Page 2](group-1/page-3/page-4/page-2.md)     * [Page 1](group-1/page-3/page-4/page-1.md)  ***  * [Page 5](/page-5/) ","url": "https://martinemre.github.io/SUMMARY/"
+    "excerpt":"# Table of contents  * [Page](README.md)  ## Group 1  * [Page 3](group-1/page-3/README.md)   * [Page 4](group-1/page-3/page-4/README.md)     * [Page 2](group-1/page-3/page-4/page-2.md)     * [Page 1](group-1/page-3/page-4/page-1.md)  ***  * [Page 5](page-5.md) ","url": "https://martinemre.github.io/SUMMARY/"
   },{
     "title": null,
     "excerpt":" ","url": "https://martinemre.github.io/_pages/"
-  },{
-    "title": "Page 5",
-    "excerpt":"# Page 5  fdsdsfsdfadsf    * fdfdf      fdfdf  fdfdf    > fdfd  *** ","url": "https://martinemre.github.io/page-5/"
   },{
     "title": null,
     "excerpt":" {% if page.xsl %} {% endif %} {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}{% for collection in collections %}{% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}{% for doc in docs %} {{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }} {% if doc.last_modified_at or doc.date %}{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }} {% endif %} {% endfor %}{% endfor %}{% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != \"/404.html\"' %}{% for page in pages %} {{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }} {% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }} {% endif %} {% endfor %}{% assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != \"404.html\"' %}{% for file in static_files %} {{ file.path | replace:'/index.html','/' | absolute_url | xml_escape }} {{ file.modified_time | date_to_xmlschema }}  {% endfor %} ","url": "https://martinemre.github.io/sitemap.xml"
