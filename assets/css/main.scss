@@ -1,3 +1,15 @@
 --- --- @charset "utf-8";
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
+.page__content {
+    max-width: 720px;
+}
+
+.page__content p {
+    line-height: 1.7;
+}
+
+.page__content h2 {
+    border-bottom: none;
+}
