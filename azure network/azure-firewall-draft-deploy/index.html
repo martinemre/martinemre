@@ -104,7 +104,7 @@
   
 
 
-    <meta timestamp="2026-04-07 09:26" />
+    <meta timestamp="2026-04-07 09:43" />
 <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/  -->
@@ -125,7 +125,7 @@
 <!-- end custom head snippets -->
 
 <!-- Custom CSS Override -->
-<link rel="stylesheet" href="/assets/css/custom.css?v=1775550543">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775551533">
 
 <style>
     /* ===================================
@@ -155,7 +155,7 @@
     }
 
     /* ===================================
-       ÜST MENÜ - GRİ RENK (Soldaki gibi #555)
+       ÜST MENÜ - GRİ RENK + İNCE ALT ÇİZGİ
        =================================== */
     .masthead {
         background-color: #ffffff !important;
@@ -165,7 +165,6 @@
 
     .greedy-nav a {
         color: #555 !important;
-        /* GRİ - soldaki linkler gibi */
         font-weight: 500 !important;
         font-size: 0.95rem !important;
         margin-left: 1rem !important;
@@ -173,29 +172,29 @@
 
     .greedy-nav a:hover {
         color: #3498db !important;
-        /* Hover mavi */
     }
 
     .greedy-nav a.active {
         color: #3498db !important;
-        /* Aktif mavi */
     }
 
+    /* ALT ÇİZGİ İNCE (2px -> 1px) */
     .greedy-nav .visible-links a::before,
     .greedy-nav .visible-links a::after {
         background: #3498db !important;
+        height: 1px !important;
+        /* İNCE */
     }
 
     .search__toggle {
         color: #555 !important;
-        /* Arama ikonu da gri */
     }
 
     .search__toggle:hover {
         color: #3498db !important;
     }
 
-    /* Site başlığı (All About Azure) */
+    /* Site başlığı */
     .site-title {
         color: #2c3e50 !important;
     }
@@ -205,16 +204,31 @@
     }
 
     /* ===================================
-       SIDEBAR
+       SIDEBAR - EME MARTİN KOYU MAVİ
        =================================== */
     .author__name {
-        color: #2c3e50 !important;
+        color: #1a5276 !important;
+        /* KOYU MAVİ - post başlıklarıyla aynı */
         font-weight: 600 !important;
         font-size: 1.25rem !important;
     }
 
+    .author__name a {
+        color: #1a5276 !important;
+    }
+
+    .author__name a:hover {
+        color: #2980b9 !important;
+    }
+
     .author__bio {
         color: #555 !important;
+    }
+
+    /* Azure kelimesi */
+    .author__bio strong,
+    .author__bio b {
+        color: #1a5276 !important;
     }
 
     .author__urls a {
@@ -250,14 +264,13 @@
         padding: 1.5rem !important;
     }
 
-    /* BAŞLIK - KOYU MAVİ (#1a5276) */
+    /* BAŞLIK - KOYU MAVİ */
     .archive__item-title {
         margin: 0 0 0.5rem 0 !important;
     }
 
     .archive__item-title a {
         color: #1a5276 !important;
-        /* KOYU MAVİ */
         font-family: 'Roboto Slab', Georgia, serif !important;
         font-weight: 600 !important;
         font-size: 1.3rem !important;
@@ -270,11 +283,10 @@
         text-decoration: underline !important;
     }
 
-    /* EXCERPT - BİR TIK KÜÇÜK (0.9rem) */
+    /* EXCERPT - KÜÇÜK FONT */
     .archive__item-excerpt {
         color: #555 !important;
-        font-size: 0.9rem !important;
-        /* KÜÇÜLDÜ */
+        font-size: 0.7rem !important;
         line-height: 1.5 !important;
         margin: 0.5rem 0 0.75rem 0 !important;
     }
@@ -282,8 +294,7 @@
     .archive__item-excerpt p {
         color: #555 !important;
         margin: 0 !important;
-        font-size: 0.9rem !important;
-        /* KÜÇÜLDÜ */
+        font-size: 0.7rem !important;
     }
 
     /* Meta bilgiler */
