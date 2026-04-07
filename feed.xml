@@ -26,7 +26,7 @@
 
 &lt;h2 id=&quot;how-to-create-a-draft&quot;&gt;How to create a Draft?&lt;/h2&gt;
 
-&lt;p&gt;To create a draft, follow these steps: Firewall Policy → Draft + Deploy → Draft&lt;/p&gt;
+&lt;p&gt;To create a draft, follow these steps: &lt;strong&gt;Firewall Policy → Draft + Deploy → Draft&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Using this path, you can create a draft based on the current policy and start making your changes in an isolated environment.&lt;/p&gt;
 

@@ -123,7 +123,7 @@
 <!-- end custom head snippets -->
 
 <!-- Custom CSS Override -->
-<link rel="stylesheet" href="/assets/css/custom.css?v=1775594282">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775594527">
 
 <style>
     /* ===================================
@@ -380,25 +380,34 @@
     }
 
     /* ===================================
-   POST İÇİ BAŞLIK VE META - INLINE STYLE OVERRIDE
+   POST İÇİ BAŞLIK - TÜM BOŞLUKLARI SIFIRLA
    =================================== */
 
-    /* Inline style'ı ez - !important ve attribute selector */
-    h1.page__title p[style],
-    .page__title p[style] {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    /* Veya tüm p elementlerini hedefle */
-    .page__title p {
+    /* h1 ve tüm çocukları */
+    h1.page__title,
+    h1.page__title *,
+    .page__title,
+    .page__title * {
         margin: 0 !important;
         padding: 0 !important;
+        line-height: 1 !important;
     }
 
     /* 2 minute read */
-    p.page__meta {
-        margin: 0.5rem 0 0 0 !important;
+    p.page__meta,
+    .page__meta {
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-top: 0.25rem !important;
+        /* veya tamamen 0 */
+    }
+
+    /* Linklerin margin/padding'i */
+    .page__title a,
+    .page__title a:hover {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: inline !important;
     }
 </style>
   </head>
@@ -650,7 +659,7 @@
 
 <h2 id="how-to-create-a-draft">How to create a Draft?</h2>
 
-<p>To create a draft, follow these steps: Firewall Policy → Draft + Deploy → Draft</p>
+<p>To create a draft, follow these steps: <strong>Firewall Policy → Draft + Deploy → Draft</strong></p>
 
 <p>Using this path, you can create a draft based on the current policy and start making your changes in an isolated environment.</p>
 
