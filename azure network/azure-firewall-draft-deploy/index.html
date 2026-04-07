@@ -123,7 +123,7 @@
 <!-- end custom head snippets -->
 
 <!-- Custom CSS Override -->
-<link rel="stylesheet" href="/assets/css/custom.css?v=1775559966">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775560595">
 
 <style>
     /* ===================================
@@ -188,7 +188,7 @@
     }
 
     .greedy-nav .visible-links a::before {
-        background: #3498db !important;
+        background: #0e69a5 !important;
         height: 1px !important;
         transform: scaleX(0) !important;
         transition: transform 0.2s ease !important;
@@ -368,9 +368,19 @@
         /* Blok element */
     }
 
-    /* Alt yazıyı tamamen kaldır */
-    .site-subtitle {
-        display: none !important;
+    /* Başlık rengi siyah */
+    .page__title {
+        color: #000000 !important;
+    }
+
+    /* Başlık altı boşluk */
+    .page__title {
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* Meta (2 minute read) üst boşluk */
+    .page__header .page__meta {
+        margin-top: 0.5rem !important;
     }
 </style>
   </head>
@@ -450,7 +460,7 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Senior <strong>Azure</strong> Consultants</p>
+        <p>Senior <strong>Azure</strong> Consultant</p>
 
       </div>
     
@@ -604,7 +614,7 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>Azure Firewall’s Draft &amp; Deploy feature was in preview for quite a while, but it finally went Generally Available in March 2026.</p>
+        <p>Azure Firewall’s Draft &amp; Deploy feature was in preview for quite a while, but it finally went General Availability in March 2026.</p>
 
 <h2 id="what-is-azure-firewall-draft--deploy-and-why-should-you-care">What is Azure Firewall Draft + Deploy, and why should you care?</h2>
 
@@ -614,7 +624,7 @@
 
 <h2 id="what-changed-with-azure-firewall-draft--deploy">What changed with Azure Firewall Draft &amp; Deploy?</h2>
 
-<p>Draft + Deploy fixes this by giving you a proper workflow. Instead of pushing changes live immediately, you now work in a draft first. Think of it as a sandbox where you can pile up all your rule changes - add new ones, update existing ones, whatever you need to do.</p>
+<p>Draft + Deploy fixes this by giving you a proper workflow. Instead of pushing changes live immediately, you now work in a draft first. Think of it as a sandbox where you can add all your rule changes - add new ones, update existing ones, whatever you need to do.</p>
 
 <p>The draft starts from a snapshot of your current Firewall Policy, And here’s the useful part multiple teams can collaborate on the same draft at the same time. Your network team adds some rules, security team reviews them, all in parallel.</p>
 
