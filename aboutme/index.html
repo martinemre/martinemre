@@ -119,7 +119,7 @@
 <!-- end custom head snippets -->
 
 <!-- Custom CSS Override -->
-<link rel="stylesheet" href="/assets/css/custom.css?v=1775558014">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775558460">
 
 <style>
     /* ===================================
@@ -346,8 +346,11 @@
     /* BAŞLIK - TEK SATIR (nowrap) */
     .archive__item-title {
         margin: 0 0 0.5rem 0 !important;
-        white-space: normal !important;
-        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* max 2 satır */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .archive__item-title a {
@@ -598,19 +601,17 @@
 I hope you find inspiration and useful insights on this blog as we navigate the vast world of technology together. Feel free to join the conversation with your questions or share your own experiences 😊</p>
 
 <h3 id="-some-of-the-azure-certifications-i-have">🏆 Some of the Azure certifications I have:</h3>
-<blockquote>
-  <ul>
-    <li><strong>Microsoft Certified</strong>: DevOps Engineer Expert</li>
-    <li><strong>Microsoft Certified</strong>: Azure Virtual Desktop Specialty</li>
-    <li><strong>Microsoft Certified</strong>: Azure Security Engineer Associate</li>
-    <li><strong>Microsoft Certified</strong>: Azure Support Engineer for Connectivity Specialty</li>
-    <li><strong>Microsoft Certified</strong>: Azure Network Engineer Associate</li>
-    <li><strong>Microsoft Certified</strong>: Azure Solutions Architect Expert</li>
-    <li><strong>Microsoft Certified</strong>: Azure Administrator Associate</li>
-    <li><strong>Microsoft Certified</strong>: Azure Solutions Architect Expert (Legacy)</li>
-    <li><strong>Microsoft Certified</strong>: Azure Administrator Associate (Legacy)</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><strong>Microsoft Certified</strong>: DevOps Engineer Expert</li>
+  <li><strong>Microsoft Certified</strong>: Azure Virtual Desktop Specialty</li>
+  <li><strong>Microsoft Certified</strong>: Azure Security Engineer Associate</li>
+  <li><strong>Microsoft Certified</strong>: Azure Support Engineer for Connectivity Specialty</li>
+  <li><strong>Microsoft Certified</strong>: Azure Network Engineer Associate</li>
+  <li><strong>Microsoft Certified</strong>: Azure Solutions Architect Expert</li>
+  <li><strong>Microsoft Certified</strong>: Azure Administrator Associate</li>
+  <li><strong>Microsoft Certified</strong>: Azure Solutions Architect Expert (Legacy)</li>
+  <li><strong>Microsoft Certified</strong>: Azure Administrator Associate (Legacy)</li>
+</ul>
 
 <p><br /></p>
 

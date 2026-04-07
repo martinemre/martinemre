@@ -119,7 +119,7 @@
 <!-- end custom head snippets -->
 
 <!-- Custom CSS Override -->
-<link rel="stylesheet" href="/assets/css/custom.css?v=1775558014">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775558460">
 
 <style>
     /* ===================================
@@ -346,8 +346,11 @@
     /* BAŞLIK - TEK SATIR (nowrap) */
     .archive__item-title {
         margin: 0 0 0.5rem 0 !important;
-        white-space: normal !important;
-        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* max 2 satır */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .archive__item-title a {
@@ -363,7 +366,7 @@
 </style>
   </head>
 
-  <body class="layout--posts">
+  <body class="layout--posts wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
