@@ -9,31 +9,33 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Collection - All About Azure</title>
-<meta name="description" content="**">
+<!-- begin _includes/seo.html --><title>Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts - All About Azure</title>
+<meta name="description" content="Learn how Azure Firewall Prescaling prevents latency during sudden traffic spikes before autoscale reacts.">
 
 
   <meta name="author" content="Emre Martin">
   
+  <meta property="article:author" content="Emre Martin">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_IE">
 <meta property="og:site_name" content="All About Azure">
-<meta property="og:title" content="Posts by Collection">
-<meta property="og:url" content="https://martinemre.github.io/collection-archive/">
+<meta property="og:title" content="Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts">
+<meta property="og:url" content="https://martinemre.github.io/azure%20network/azure-firewall-prescaling/">
 
 
-  <meta property="og:description" content="**">
+  <meta property="og:description" content="Learn how Azure Firewall Prescaling prevents latency during sudden traffic spikes before autoscale reacts.">
 
 
 
 
 
   <meta name="twitter:site" content="@username">
-  <meta name="twitter:title" content="Posts by Collection">
-  <meta name="twitter:description" content="**">
-  <meta name="twitter:url" content="https://martinemre.github.io/collection-archive/">
+  <meta name="twitter:title" content="Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts">
+  <meta name="twitter:description" content="Learn how Azure Firewall Prescaling prevents latency during sudden traffic spikes before autoscale reacts.">
+  <meta name="twitter:url" content="https://martinemre.github.io/azure%20network/azure-firewall-prescaling/">
 
   
     <meta name="twitter:card" content="summary">
@@ -44,6 +46,8 @@
 
 
 
+  <meta property="article:published_time" content="2026-04-19T00:00:00+00:00">
+
 
 
 
@@ -53,7 +57,7 @@
   
 
 
-<link rel="canonical" href="https://martinemre.github.io/collection-archive/">
+<link rel="canonical" href="https://martinemre.github.io/azure%20network/azure-firewall-prescaling/">
 
 
 
@@ -410,7 +414,7 @@
 </style>
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -458,6 +462,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -589,46 +595,229 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
-  
   </div>
 
 
 
-  <div class="archive">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <h1 id="page-title" class="page__title">Posts by Collection</h1>
+    <meta itemprop="headline" content="Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts">
+    
+    <meta itemprop="description" content="Learn how Azure Firewall Prescaling prevents latency during sudden traffic spikes before autoscale reacts.">
     
     
+    <meta itemprop="datePublished" content="2026-04-19T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+      <header>
+        <h1 id="page-title" class="page__title p-name" itemprop="headline">
+          <a href="https://martinemre.github.io/azure%20network/azure-firewall-prescaling/" class="u-url" itemprop="url"><p>Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts
+
+          </a>
+        </h1>
+        
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+      </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="understanding-azure-firewall-autoscaling">Understanding Azure Firewall Autoscaling</h2>
+
+<p>Azure Firewall runs multiple instances in the background, and the instance count is automatically managed by Microsoft due to its PaaS nature.
+To put it simply: as load on the firewall increases (based on average throughput, CPU, and connection usage metrics), Microsoft adds new instances to the backend (scale out). When load decreases, the instance count is reduced accordingly (scale in).</p>
+
+<p>While this mechanism is useful, instance provisioning is not instantaneous and typically takes 4-7 minutes on average. This means unexpected traffic spikes can result in increased latency and packet loss.</p>
+
+<p>Example: Your e-commerce site may experience unexpected traffic surges during Black Friday. Azure Firewall’s autoscale feature detects this increased load and triggers the provisioning of new instances in the background. During this window, existing instances are forced to operate beyond their capacity, leading to a degraded user experience including high latency, timeout errors, or even complete loss of connectivity.</p>
+
+<h2 id="what-changed-with-pre-scaling-">What Changed with Pre-Scaling ?</h2>
+
+<p>Azure Firewall Prescaling is a feature that proactively scales firewall performance. It prepares the firewall for sudden traffic spikes by adjusting capacity to meet predefined minimum requirements before traffic actually increases.</p>
+
+<h2 id="how-to-configure-it-">How to configure it ?</h2>
+
+<p>You can access the scaling options by navigating to Azure Firewall &gt; Scaling options in the Azure portal.</p>
+
+<p><img src="/assets/images/azurefirewall/azurefirewallprescaling.png" alt="Firewall" /></p>
+
+<p>Here:</p>
+<ul>
+  <li><strong>Minimum capacity units:</strong> The capacity the firewall will have ready at all times.</li>
+  <li><strong>Maximum capacity units:</strong> The upper limit the firewall can scale out to.</li>
+</ul>
+
+<p><strong>Heads up:</strong> If you set the minimum capacity equal to the maximum capacity, autoscaling is disabled and the firewall runs in fixed capacity mode. {: .notice–warning}</p>
+
+<h2 id="well-what-capacity-do-i-need">Well, What Capacity Do I Need?</h2>
+
+<p><img src="/assets/images/azurefirewall/azurefirewallobservedcapacity.png" alt="Draft" /></p>
+
+<p>When determining minimum and maximum capacity unit values, you can review historical capacity usage through the Firewall Observed Capacity Units metric. However, since this only reflects past data, it cannot predict sudden traffic spikes from future scenarios that have never occurred before such as Black Friday events. For this reason, capacity planning should not rely solely on historical observed values. You must also account for business growth projections, peak traffic scenarios, and potential connection bursts.</p>
+
+<p>In situations where traffic increases are unpredictable, the most practical approach is to collaborate with your marketing/sales teams to align on expected user volumes. Once you have agreement, run load tests using Azure Load Testing or a similar tool for the target number of users, then analyze the resulting Azure Firewall Observed Capacity Units logs to make your final decision.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
 
 
   
-  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
-  
+      <a href="/tags/#azure-firewall" class="page__taxonomy-item p-category" rel="tag">Azure Firewall</a><span class="sep">, </span>
     
+      <a href="/tags/#azure-networking" class="page__taxonomy-item p-category" rel="tag">Azure Networking</a>
+    
+    </span>
+  </p>
+
+
+
+
   
 
 
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#azure-network" class="page__taxonomy-item p-category" rel="tag">Azure Network</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-04-19T00:00:00+00:00">April 19, 2026</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=username&text=Azure+Firewall+Prescaling%3A+Preventing+Black+Friday+Spikes+Before+Autoscale+Reacts%20https%3A%2F%2Fmartinemre.github.io%2Fazure%2520network%2Fazure-firewall-prescaling%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmartinemre.github.io%2Fazure%2520network%2Fazure-firewall-prescaling%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmartinemre.github.io%2Fazure%2520network%2Fazure-firewall-prescaling%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/azure%20network/azure-firewall-draft-deploy/" class="pagination--pager" title="Azure Firewall : From Incremental Updates to Atomic Policy Deployment
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+    <div style="margin-top: 40px;"></div>
+    <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="giscus-comments"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+  <div class="page__related">
+    <h2 class="page__related-title">You May Also Enjoy
+    </h2>
+    <div class="grid__wrapper">
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+      <a href="/azure%20network/azure-firewall-draft-deploy/" rel="permalink">Azure Firewall : From Incremental Updates to Atomic Policy Deployment
+</a>
+      
+    </h2>
+
+    <!-- EXCERPT BURAYA EKLENDİ -->
+    
+    <p class="archive__item-excerpt" itemprop="description">
+      Learn how Azure Draft &amp; Deploy enables safe, atomic firewall policy updates without risking production.
+
+    </p>
+    
+
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+  </article>
+</div>
+      
+    </div>
   </div>
+  
+  
 </div>
     </div>
 
@@ -743,6 +932,33 @@ $(document).ready(function () {
 
 
 
+
+
+    <script>
+  'use strict';
+
+  (function () {
+    var commentContainer = document.querySelector('#giscus-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    script.setAttribute('data-repo', 'martinemre/martinemre.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOR5KE2Q');
+    script.setAttribute('data-category', 'Comments');
+    script.setAttribute('data-category-id', 'DIC_kwDOR5KE2c4C6Gf6');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+  
 
 
 

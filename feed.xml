@@ -7,6 +7,48 @@
 		<atom:link href="https://martinemre.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Azure Firewall Prescaling: Preventing Black Friday Spikes Before Autoscale Reacts</title>
+				<description>&lt;h2 id=&quot;understanding-azure-firewall-autoscaling&quot;&gt;Understanding Azure Firewall Autoscaling&lt;/h2&gt;
+
+&lt;p&gt;Azure Firewall runs multiple instances in the background, and the instance count is automatically managed by Microsoft due to its PaaS nature.
+To put it simply: as load on the firewall increases (based on average throughput, CPU, and connection usage metrics), Microsoft adds new instances to the backend (scale out). When load decreases, the instance count is reduced accordingly (scale in).&lt;/p&gt;
+
+&lt;p&gt;While this mechanism is useful, instance provisioning is not instantaneous and typically takes 4-7 minutes on average. This means unexpected traffic spikes can result in increased latency and packet loss.&lt;/p&gt;
+
+&lt;p&gt;Example: Your e-commerce site may experience unexpected traffic surges during Black Friday. Azure Firewall’s autoscale feature detects this increased load and triggers the provisioning of new instances in the background. During this window, existing instances are forced to operate beyond their capacity, leading to a degraded user experience including high latency, timeout errors, or even complete loss of connectivity.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-changed-with-pre-scaling-&quot;&gt;What Changed with Pre-Scaling ?&lt;/h2&gt;
+
+&lt;p&gt;Azure Firewall Prescaling is a feature that proactively scales firewall performance. It prepares the firewall for sudden traffic spikes by adjusting capacity to meet predefined minimum requirements before traffic actually increases.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-configure-it-&quot;&gt;How to configure it ?&lt;/h2&gt;
+
+&lt;p&gt;You can access the scaling options by navigating to Azure Firewall &amp;gt; Scaling options in the Azure portal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/azurefirewall/azurefirewallprescaling.png&quot; alt=&quot;Firewall&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Minimum capacity units:&lt;/strong&gt; The capacity the firewall will have ready at all times.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum capacity units:&lt;/strong&gt; The upper limit the firewall can scale out to.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Heads up:&lt;/strong&gt; If you set the minimum capacity equal to the maximum capacity, autoscaling is disabled and the firewall runs in fixed capacity mode. {: .notice–warning}&lt;/p&gt;
+
+&lt;h2 id=&quot;well-what-capacity-do-i-need&quot;&gt;Well, What Capacity Do I Need?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/azurefirewall/azurefirewallobservedcapacity.png&quot; alt=&quot;Draft&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When determining minimum and maximum capacity unit values, you can review historical capacity usage through the Firewall Observed Capacity Units metric. However, since this only reflects past data, it cannot predict sudden traffic spikes from future scenarios that have never occurred before such as Black Friday events. For this reason, capacity planning should not rely solely on historical observed values. You must also account for business growth projections, peak traffic scenarios, and potential connection bursts.&lt;/p&gt;
+
+&lt;p&gt;In situations where traffic increases are unpredictable, the most practical approach is to collaborate with your marketing/sales teams to align on expected user volumes. Once you have agreement, run load tests using Azure Load Testing or a similar tool for the target number of users, then analyze the resulting Azure Firewall Observed Capacity Units logs to make your final decision.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+				<link>https://martinemre.github.io/azure%20network/azure-firewall-prescaling/</link>
+				<guid isPermaLink="true">https://martinemre.github.io/azure%20network/azure-firewall-prescaling/</guid>
+			</item>
+		
+			<item>
 				<title>Azure Firewall : From Incremental Updates to Atomic Policy Deployment</title>
 				<description>&lt;p&gt;Azure Firewall’s Draft &amp;amp; Deploy feature was in preview for quite a while, but it finally went General Availability in March 2026.&lt;/p&gt;
 
