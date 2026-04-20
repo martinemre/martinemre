@@ -32,7 +32,7 @@ To put it simply: as load on the firewall increases (based on average throughput
   &lt;li&gt;&lt;strong&gt;Maximum capacity units:&lt;/strong&gt; The upper limit the firewall can scale out to.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Heads up:&lt;/strong&gt; If you set the minimum capacity equal to the maximum capacity, autoscaling is disabled and the firewall runs in fixed capacity mode. {: .notice–warning}&lt;/p&gt;
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;Heads up:&lt;/strong&gt; If you set the minimum capacity equal to the maximum capacity, autoscaling is disabled and the firewall runs in fixed capacity mode.&lt;/p&gt;
 
 &lt;h2 id=&quot;well-what-capacity-do-i-need&quot;&gt;Well, What Capacity Do I Need?&lt;/h2&gt;
 
